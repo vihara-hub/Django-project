@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f0f4f8; /* Light background */
+            color: #333; /* Darker text for readability */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: #00796b; /* Teal for header */
+            color: #ffffff; /* White text for contrast */
+            padding: 2rem 0;
+            border-bottom: 2px solid #004d40; /* Darker teal border */
+            text-align: center;
+        }
+
+        header h1 {
+            color: #ffffff; /* White title */
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .line1 {
+            width: 150px;
+            height: 4px;
+            background-color: #ffb74d; /* Light orange line for accent */
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40;
+            color: #ffb74d; /* Light orange text on hover */
+        }
+
+        /* Main Section */
+        main {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero {
+            background: #ffffff; /* White background for hero section */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #00796b; /* Teal for heading */
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666; /* Gray text for secondary content */
+        }
+
+        /* Footer */
+        footer {
+            background: #00796b; /* Match the header background */
+            color: #ffffff;
+            padding: 1.5rem 0;
+            border-top: 2px solid #004d40; /* Match the header border */
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer p a {
+            color: #ffb74d; /* Light orange for footer links */
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inventory and Order Management</h1>
+        <div class="line1"></div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" target="_blank">Home</a></li>
+                <li><a href="{% url 'categories' %}" target="_blank">Categories</a></li>
+                <li><a href="{% url 'orders' %}" target="_blank">Orders</a></li>
+                <li><a href="{% url 'items' %}" target="_blank">Items</a></li>
+                <li><a href="{% url 'employees' %}" target="_blank">Employees</a></li>
+                <li><a href="{% url 'suppliers' %}" target="_blank">Suppliers</a></li>
+                <li><a href="{% url 'units' %}" target="_blank">Units</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Inventory and Order Management System</h2>
+            <p>Manage your inventory, orders, and more with ease. Navigate through the categories to find what you need.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="{% url 'home' %}">Inventory and Order Management System</a>. All rights reserved.</p>
+    </footer>
+</body>
+</html>
